@@ -1,0 +1,53 @@
+#	####################################################
+#	СИНТАКСИЧЕСКАЯ РАСКРАСКА ДЛЯ БИБИЛИОТЕКИ:
+#	iarduino_Metro
+#	####################################################
+#	ТИПЫ ДАННЫХ:							   (KEYWORD1)
+	iarduino_Metro	KEYWORD1
+#	####################################################
+#	МЕТОДЫ И ФУНКЦИИ:						   (KEYWORD2)
+	iarduino_Metro_Start	KEYWORD2
+	begin	KEYWORD2
+	test	KEYWORD2
+	read	KEYWORD2
+	off	KEYWORD2
+	on	KEYWORD2
+	set	KEYWORD2
+	MELODY	KEYWORD2
+	RGB	KEYWORD2
+	frequency	KEYWORD2
+	addres	KEYWORD2
+	model	KEYWORD2
+	version	KEYWORD2
+	size	KEYWORD2
+#	####################################################
+#	КОНСТАНТЫ:								   (LITERAL1)
+	MOD_KEY	LITERAL1
+	MOD_RGB	LITERAL1
+	MOD_RES	LITERAL1
+	MOD_BUZ	LITERAL1
+	MOD_DHT	LITERAL1
+	MOD_DSL	LITERAL1
+	MOD_EXT	LITERAL1
+	MOD_8X8	LITERAL1
+	MOD_2RM	LITERAL1
+	KEY_PUSHED	LITERAL1
+	KEY_RELEASED	LITERAL1
+	KEY_PRESSED	LITERAL1
+	KEY_TRIGGER	LITERAL1
+	KEY_HOLD3	LITERAL1
+	KEY_HOLD2	LITERAL1
+	KEY_HOLD1	LITERAL1
+	KEY_CHANGED	LITERAL1
+	KEY_TIME	LITERAL1
+	KEY_SUM	LITERAL1
+	RES_ADC	LITERAL1
+	RES_CHANGED	LITERAL1
+	DHT_TEMPERATURE	LITERAL1
+	DHT_HUMIDITY	LITERAL1
+	DHT_CHANGED_TEM	LITERAL1
+	DHT_CHANGED_HUM	LITERAL1
+	DSL_LUX	LITERAL1
+	DSL_DISTANCE	LITERAL1
+	DSL_COEFFICIENT	LITERAL1
+	DSL_CHANGED	LITERAL1
