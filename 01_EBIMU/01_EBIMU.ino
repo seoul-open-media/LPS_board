@@ -1,14 +1,13 @@
 ////////////////////////////////////////////////////////////////////
 /////////////////////// EBIMU FUNCTION /////////////////////////////
 
-#include <SoftwareSerial.h>
+#define HWSERIAL Serial2
 
 #define SBUF_SIZE 64
 
 char sbuf[SBUF_SIZE];
 signed int sbuf_cnt=0;
 
-SoftwareSerial softSerial(5, 4); // RX, TX
 
 int EBimuAsciiParser(float *item, int number_of_item)
 {
@@ -17,10 +16,10 @@ int EBimuAsciiParser(float *item, int number_of_item)
   char *addr; 
   int result = 0;
   
-  rbytes = softSerial.available();
+  rbytes = HWSERIAL.available();
   for(n=0;n<rbytes;n++)
   {
-    sbuf[sbuf_cnt] = softSerial.read();
+    sbuf[sbuf_cnt] = HWSERIAL.read();
     if(sbuf[sbuf_cnt]==0x0a)
        {
            addr = strtok(sbuf,",");
@@ -32,8 +31,8 @@ int EBimuAsciiParser(float *item, int number_of_item)
 
            result = 1;
 
-         // softSerial.print("\n\r");
-         // for(i=0;i<number_of_item;i++)  {  softSerial.print(item[i]);  Serial.print(" "); }
+         // HWSERIAL.print("\n\r");
+         // for(i=0;i<number_of_item;i++)  {  HWSERIAL.print(item[i]);  Serial.print(" "); }
        }
      else if(sbuf[sbuf_cnt]=='*')
        {   sbuf_cnt=-1;
@@ -51,7 +50,7 @@ int EBimuAsciiParser(float *item, int number_of_item)
 
 void setup() {
   Serial.begin(115200);
-  softSerial.begin(57600); // Set the baudrate with GTKTERM <lf> <sb4>
+  HWSERIAL.begin(57600); // Set the baudrate with GTKTERM <lf> <sb4><sor10> : factory reset, baudrate 9600, Report every 10ms.
   Serial.println("EBIMU test");
 }
 
